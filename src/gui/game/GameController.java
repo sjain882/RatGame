@@ -3,6 +3,14 @@ package gui.game;
 import game.RatGame;
 import game.RatGameBuilder;
 import game.entity.Item;
+import game.entity.subclass.bomb.Bomb;
+import game.entity.subclass.deathRat.DeathRat;
+import game.entity.subclass.femaleSexChange.FemaleSexChange;
+import game.entity.subclass.gas.Gas;
+import game.entity.subclass.maleSexChange.MaleSexChange;
+import game.entity.subclass.noentry.NoEntry;
+import game.entity.subclass.poison.Poison;
+import game.entity.subclass.sterilisation.Sterilisation;
 import game.event.GameEvent;
 import game.event.adapter.AbstractGameAdapter;
 import game.event.impl.entity.specific.game.GameEndEvent;
@@ -42,7 +50,11 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.DataFormat;
 import javafx.scene.input.DragEvent;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
@@ -81,6 +93,11 @@ public class GameController extends AbstractGameAdapter {
      */
     private static final URL SCENE_FXML =
             GameController.class.getResource("GameScene.fxml");
+
+    /**
+     * Item selected for the purposes of placing.
+     */
+    private Class<? extends Item> itemSelected;
 
     /**
      * Root scene node object.
@@ -640,6 +657,40 @@ public class GameController extends AbstractGameAdapter {
             i.setMaxWidth(Tile.DEFAULT_SIZE);
         });
 
+        pane.addEventFilter(MouseEvent.MOUSE_PRESSED, event->{ //TODO modding
+            if (event.getButton() == MouseButton.SECONDARY){
+                double x = event.getX();
+                double y = event.getY();
+                final int row = (int) Math.floor(y / Tile.DEFAULT_SIZE);
+                final int col = (int) Math.floor(x / Tile.DEFAULT_SIZE);
+
+                game.useItem(
+                        (Class<? extends Item>) itemSelected,
+                        row,
+                        col);
+            }
+        });
+
+        root.addEventFilter(KeyEvent.KEY_PRESSED, event->{ //TODO modding
+            if (event.getCode() == KeyCode.P) {
+                itemSelected = Poison.class;
+            } else if (event.getCode() == KeyCode.B) {
+                itemSelected = Bomb.class;
+            } else if (event.getCode() == KeyCode.D) {
+                itemSelected = DeathRat.class;
+            } else if (event.getCode() == KeyCode.G) {
+                itemSelected = Gas.class;
+            } else if (event.getCode() == KeyCode.M) {
+                itemSelected = MaleSexChange.class;
+            } else if (event.getCode() == KeyCode.F) {
+                itemSelected = FemaleSexChange.class;
+            } else if (event.getCode() == KeyCode.N) {
+                itemSelected = NoEntry.class;
+            } else if (event.getCode() == KeyCode.S) {
+                itemSelected = Sterilisation.class;
+            }
+        });
+
         pane.setOnDragOver(event -> {
             // Mark the drag event as acceptable by the gameStackPane.
             event.acceptTransferModes(TransferMode.ANY);
@@ -973,13 +1024,13 @@ public class GameController extends AbstractGameAdapter {
      * @param event The drag event that was accepted.
      */
     @SuppressWarnings("unchecked")
-    private void itemDropped(final DragEvent event) {
+    private void itemDropped(final DragEvent event) { //TODO modding
         double x = event.getX();
         double y = event.getY();
 
         final Object objectData =
                 event.getDragboard().getContent(ItemViewController.DATA_FORMAT);
-
+        System.out.println(objectData);
         if (objectData instanceof Class<?> objectClass) {
             final Class<Item> baseClass = Item.class;
 
@@ -998,6 +1049,8 @@ public class GameController extends AbstractGameAdapter {
             }
         }
     }
+
+
 
     /**
      * Changes the games speed based on the target of the event.

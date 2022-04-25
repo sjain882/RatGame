@@ -6,6 +6,7 @@ import game.contextmap.ContextualMap;
 import game.contextmap.TileData;
 import game.entity.Entity;
 import game.entity.Item;
+import game.entity.subclass.poison.Poison;
 import game.entity.subclass.rat.Rat;
 import game.event.impl.entity.specific.game.GameEndEvent;
 import game.event.impl.entity.specific.game.GamePausedEvent;
@@ -279,7 +280,7 @@ public class RatGame {
      * @return {@code true} if the item has been queued to be spawned.
      * Otherwise, if not then {@code false} is returned.
      */
-    public boolean useItem(final Class<? extends Item> item,
+    public boolean useItem(final Class<? extends Item> item,    //TODO modding
                            final int row,
                            final int col) {
 
