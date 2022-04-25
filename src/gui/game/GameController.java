@@ -95,7 +95,7 @@ public class GameController extends AbstractGameAdapter {
             GameController.class.getResource("GameScene.fxml");
 
     /**
-     * Item selected for the purposes of placing.
+     * Item selected for the purposes of placing. a4f
      */
     private Class<? extends Item> itemSelected;
 
@@ -656,8 +656,9 @@ public class GameController extends AbstractGameAdapter {
             i.setMinWidth(Tile.DEFAULT_SIZE);
             i.setMaxWidth(Tile.DEFAULT_SIZE);
         });
-
-        pane.addEventFilter(MouseEvent.MOUSE_PRESSED, event->{ //TODO modding
+        // it allows to utilize the right click in-game to put down selected
+        // item a4f
+        pane.addEventFilter(MouseEvent.MOUSE_PRESSED, event->{
             if (event.getButton() == MouseButton.SECONDARY){
                 double x = event.getX();
                 double y = event.getY();
@@ -670,8 +671,8 @@ public class GameController extends AbstractGameAdapter {
                         col);
             }
         });
-
-        root.addEventFilter(KeyEvent.KEY_PRESSED, event->{ //TODO modding
+        // Allows to switch between items using hotkeys a4f
+        root.addEventFilter(KeyEvent.KEY_PRESSED, event->{
             if (event.getCode() == KeyCode.P) {
                 itemSelected = Poison.class;
             } else if (event.getCode() == KeyCode.B) {
