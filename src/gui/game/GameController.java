@@ -1030,7 +1030,6 @@ public class GameController extends AbstractGameAdapter {
 
         final Object objectData =
                 event.getDragboard().getContent(ItemViewController.DATA_FORMAT);
-        System.out.println(objectData);
         if (objectData instanceof Class<?> objectClass) {
             final Class<Item> baseClass = Item.class;
 
