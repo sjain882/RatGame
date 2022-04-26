@@ -304,6 +304,17 @@
                         <Tooltip text="Reset the zoom state." wrapText="true" />
                      </tooltip>
                   </Button>
+                  <Button layoutX="269.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onLevelWikiClicked" text="Wiki" textAlignment="CENTER">
+                     <styleClass>
+                        <String fx:value="AltFontB" />
+                        <String fx:value="DefaultText" />
+                        <String fx:value="BackgroundPane" />
+                        <String fx:value="ClickEffect" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Reset the zoom state." wrapText="true" />
+                     </tooltip>
+                  </Button>
                </children>
                <HBox.margin>
                   <Insets />

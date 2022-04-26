@@ -1,6 +1,7 @@
 package launcher;
 
 import gui.about.AboutSectionController;
+import gui.levelwiki.LevelWikiController;
 import gui.assets.css.SceneStyle;
 import gui.leaderboard.LeaderboardController;
 import gui.menu.MainMenuController;
@@ -166,6 +167,15 @@ public class Main extends Application {
     public static FXMLLoader loadAboutSectionStage() {
         Objects.requireNonNull(AboutSectionController.SCENE_FXML);
         return new FXMLLoader(AboutSectionController.SCENE_FXML);
+    }
+
+    /**
+     * Initialises an FXMLoader attached to the Level Wiki scene.
+     * @return FXMLLoader containing the Level Wiki scene to load.
+     */
+    public static FXMLLoader loadLevelWikiControllerStage() {
+        Objects.requireNonNull(LevelWikiController.SCENE_FXML);
+        return new FXMLLoader(LevelWikiController.SCENE_FXML);
     }
 
     /**

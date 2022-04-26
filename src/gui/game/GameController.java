@@ -33,6 +33,7 @@ import game.level.reader.exception.RatGameFileException;
 import game.player.Player;
 import game.tile.Tile;
 import game.tile.exception.UnknownSpriteEnumeration;
+import gui.levelwiki.LevelWikiController;
 import gui.game.dependant.endscreen.EndScreenController;
 import gui.game.dependant.entitymap.EntityMap;
 import gui.game.dependant.itemview.ItemViewController;
@@ -76,6 +77,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.function.Consumer;
 
 /**
  * Main Game Window Controller; This would implement the 'RatGameActionListener'
@@ -560,6 +562,40 @@ public class GameController extends AbstractGameAdapter {
 
         this.gameScrollPane.setScaleX(defaultScale);
         this.gameScrollPane.setScaleY(defaultScale);
+    }
+
+    /**
+     * Opens a new window containing the about data for whom the project was
+     * developed by and some nice little information outside it.
+     */
+    public void onLevelWikiClicked() {
+        final FXMLLoader loader
+                = new FXMLLoader(LevelWikiController.SCENE_FXML);
+
+        try {
+            final Scene scene = new Scene(loader.load());
+
+
+
+            final Stage s = new Stage();
+            s.setAlwaysOnTop(true);
+            s.setScene(scene);
+            s.getIcons().add(new Image(Objects.requireNonNull(getClass()
+                    .getResourceAsStream("../menu/rat1.png"))));
+
+            s.showAndWait();
+
+        } catch (IOException e) {
+
+            final Alert ae = new Alert(Alert.AlertType.ERROR);
+            ae.setHeaderText("Failed to load the About Section!");
+            ae.setContentText("Some issue stopped the about section from "
+                    + "loading see: " + e.getMessage());
+            Stage stage = (Stage) ae.getDialogPane().getScene().getWindow();
+            stage.getIcons().add(new Image(Objects.requireNonNull(getClass()
+                    .getResourceAsStream("rat1.png"))));
+            ae.showAndWait();
+        }
     }
 
     /**

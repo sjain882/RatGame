@@ -1,4 +1,4 @@
-package gui.about;
+package gui.levelwiki;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -7,8 +7,9 @@ import javafx.scene.layout.Pane;
 import java.net.URL;
 
 /**
- * Controller for the About section accessed through the main menu. Contains
- * acknowledgements and tribute to developers.
+ * Controller for the Level Wiki  section accessed when playing the game level.
+ * Contains
+ * Info and tips about the gameplay
  *
  * @author Maksim Samokhvalov
  * @version 0.3
@@ -21,8 +22,8 @@ public class LevelWikiController {
      * so that it can be accessed.
      */
     public static final URL SCENE_FXML =
-            LevelWikiController.class.getResource(
-                    "AboutSection" + ".fxml");
+            gui.levelwiki.LevelWikiController.class.getResource(
+                    "LevelWiki" + ".fxml");
 
     /**
      * Pane which sits behind the main menu buttons.

@@ -688,7 +688,6 @@ public class MainMenuController implements Initializable {
                     .getResourceAsStream("rat1.png"))));
             ae.showAndWait();
         }
-
     }
 
     /**
