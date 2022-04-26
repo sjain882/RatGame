@@ -9,7 +9,9 @@ import gui.editor.module.grid.entityview.EntityViewModule;
 import gui.editor.module.grid.tileview.TileViewModule;
 import gui.editor.module.tab.TabModules;
 import gui.editor.module.tile.TileDragDropModule;
+import gui.editorwiki.EditorWikiController;
 import gui.game.dependant.tilemap.Coordinates;
+import gui.levelwiki.LevelWikiController;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.EventType;
@@ -21,6 +23,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
@@ -40,6 +43,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
@@ -456,6 +460,40 @@ public class LevelEditor implements Initializable, AutoCloseable {
                                 pos.getRow(),
                                 pos.getCol());
                     });
+        }
+    }
+
+    /**
+     * Opens a new window containing the about data about the editor with hints
+     * and else
+     */
+    public void onEditorWikiClicked() {
+        final FXMLLoader loader
+                = new FXMLLoader(EditorWikiController.SCENE_FXML);
+
+        try {
+            final Scene scene = new Scene(loader.load());
+
+
+
+            final Stage s = new Stage();
+            s.setAlwaysOnTop(true);
+            s.setScene(scene);
+            s.getIcons().add(new Image(Objects.requireNonNull(getClass()
+                    .getResourceAsStream("../menu/rat1.png"))));
+
+            s.showAndWait();
+
+        } catch (IOException e) {
+
+            final Alert ae = new Alert(Alert.AlertType.ERROR);
+            ae.setHeaderText("Failed to load the Editor Wiki Section!");
+            ae.setContentText("Some issue stopped the about section from "
+                    + "loading see: " + e.getMessage());
+            Stage stage = (Stage) ae.getDialogPane().getScene().getWindow();
+            stage.getIcons().add(new Image(Objects.requireNonNull(getClass()
+                    .getResourceAsStream("rat1.png"))));
+            ae.showAndWait();
         }
     }
 

@@ -145,6 +145,15 @@
                         <String fx:value="HoverEffect" />
                         <String fx:value="DefaultText" />
                      </styleClass></Button>
+                  <Button layoutX="312.0" layoutY="10.0" mnemonicParsing="false" onAction="#onEditorWikiClicked" text="Editor Wiki">
+                     <styleClass>
+                        <String fx:value="AltFontB" />
+                        <String fx:value="ContentModule" />
+                        <String fx:value="ClickEffect" />
+                        <String fx:value="HoverEffect" />
+                        <String fx:value="DefaultText" />
+                     </styleClass>
+                  </Button>
                </children>
                <GridPane.margin>
                   <Insets />

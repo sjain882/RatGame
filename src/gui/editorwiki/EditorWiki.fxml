@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+         minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+         styleClass="BackgroundPane"
+         stylesheets="@../assets/css/dark_theme.css"
+         xmlns="http://javafx.com/javafx/17"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="gui.editorwiki.EditorWikiController">
+  <tabs>
+    <Tab text="General Rules">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/rat/assets/MaleRat.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <Label prefHeight="27.0" prefWidth="195.0" text="General Information" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <center>
+                                    <VBox alignment="CENTER" prefHeight="340.0" prefWidth="418.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="50.0" prefWidth="323.0" text="Game Objective: Exterminate all rats before they overrun you!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="105.0" prefWidth="306.0" text="Controls: Drag items from the right on the battlefield to manipulate and destroy those pesky rats! Alternatively, press a hotkey and then rightclick on the map to spawn the item directly!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="28.0" prefHeight="102.0" prefWidth="288.0" text="Saving: Use button at the top to pause the game at any moment. While paused, the save button will be enabled, allowing you to save this level and exit. You can load this saved level at any time through the main menu." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Bomb">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/bomb/assets/Bomb.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Bomb is a powerful tool that, after being placed, ticks down for 5 seconds. After that, it destroys all rats and other items in horizontal and vertical straight lines from it.  " textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="12.0" prefWidth="83.0" text="Bomb Info" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: B" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Gas">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/gas/assets/Gas.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Gas is a powerful tool, which upon being placed expands on the adjacent tiles and deals damage to rats. It takes about 5 ticks for a rat to succumb to the power of gas." textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="12.0" prefWidth="83.0" text="Gas" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: G" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Poison">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/poison/assets/poison.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Poison is simple, yet effective weapon in your arsenal. It instantly kills the first rat that comes in contact with it, but is used in the process." textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="27.0" prefWidth="116.0" text="Poison Info" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: P" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Female Sex Change">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/femaleSexChange/assets/FemaleSexChange.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Female Sex change, once placed, changes the sex of the first rat that comes into contact with it to female(pink)." textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="27.0" prefWidth="196.0" text="Female Sex Change" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: F" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Male Sex Change">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/maleSexChange/assets/MaleSexChange.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Male Sex change, once placed, changes the sex of the first rat that comes into contact with it to male (blue)." textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="12.0" prefWidth="83.0" text="Male Sex Change" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: M" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="No Entry Sign">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/noentry/assets/NoEntrySign.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="No Entry Sign blocks rats and forces them to turn around. It has 4 lives, after which it breaks." textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="27.0" prefWidth="153.0" text="No Entry Sign Info" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: N" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Sterilisation">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/sterilisation/assets/Sterilisation.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Sterilisation radiates all surrounding rats for a few seconds, making affected rats unable to reproduce permanently." textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="27.0" prefWidth="134.0" text="Sterlisation Info" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: S" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Death Rat">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/deathRat/assets/DeathRat.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Spawns in a Deadly Rat that acts just like a normal rat, except upon meeting other rats it kills them. Death Rat kills up to 4 other rats until it dies. Death rats do not count as rats for the purposes of winning the level." textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="12.0" prefWidth="83.0" text="Death Rat Info" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: D" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

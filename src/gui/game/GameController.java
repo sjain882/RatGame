@@ -565,8 +565,8 @@ public class GameController extends AbstractGameAdapter {
     }
 
     /**
-     * Opens a new window containing the about data for whom the project was
-     * developed by and some nice little information outside it.
+     * Opens a new window containing the about data about the game with hints
+     * and else
      */
     public void onLevelWikiClicked() {
         final FXMLLoader loader
