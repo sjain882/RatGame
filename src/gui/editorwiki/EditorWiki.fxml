@@ -8,74 +8,197 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-         minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
-         styleClass="BackgroundPane"
-         stylesheets="@../assets/css/dark_theme.css"
-         xmlns="http://javafx.com/javafx/17"
-         xmlns:fx="http://javafx.com/fxml/1"
-         fx:controller="gui.editorwiki.EditorWikiController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.editorwiki.EditorWikiController">
   <tabs>
-    <Tab text="General Rules">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+      <Tab text="General Information">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
                               <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <center>
                                     <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                        <image>
-                                          <Image url="@../../game/entity/subclass/rat/assets/MaleRat.png" />
+                                          <Image url="@../menu/rat1.png" />
                                        </image>
                                     </ImageView>
                                  </center>
                               </BorderPane>
-                           </children></AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
                            <children>
                               <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Level editor is a powerful tool that allows you to make your own brand new levels from scratch!" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
                                  <top>
-                                    <Label prefHeight="27.0" prefWidth="195.0" text="General Information" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                    <Label prefHeight="27.0" prefWidth="101.0" text="Level Editor" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
                                  </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Placing Tiles">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <center>
-                                    <VBox alignment="CENTER" prefHeight="340.0" prefWidth="418.0" BorderPane.alignment="CENTER">
-                                       <children>
-                                          <Label alignment="CENTER" prefHeight="50.0" prefWidth="323.0" text="Game Objective: Exterminate all rats before they overrun you!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="105.0" prefWidth="306.0" text="Controls: Drag items from the right on the battlefield to manipulate and destroy those pesky rats! Alternatively, press a hotkey and then rightclick on the map to spawn the item directly!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="10.0" layoutY="28.0" prefHeight="102.0" prefWidth="288.0" text="Saving: Use button at the top to pause the game at any moment. While paused, the save button will be enabled, allowing you to save this level and exit. You can load this saved level at any time through the main menu." textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/tile/base/grass/assets/Bare_Grass.png" />
+                                       </image>
+                                    </ImageView>
                                  </center>
                               </BorderPane>
                            </children>
                         </AnchorPane>
-                    </items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="To place a tile on the map, drag the desired tile onto the desire space and watch it happen! If it gets too meticulous, click &quot;Drawing Mode&quot;, select a tile by left clicking on it and just move your mouse while holding your mouse to leave trace of those tiles behind!" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="27.0" prefWidth="119.0" text="Placing tiles" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                                 <bottom>
+                                    <Label text="Hotkey: B" textFill="RED" translateY="-20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
                   </SplitPane>
-               </children></AnchorPane>
-      </content>
-    </Tab>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Placing Entities">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../../game/entity/subclass/rat/assets/BabyRat.png" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="To Spawn a new entity, you need to left click on their image in the &quot;Entities&quot; submenu and drag them to the tile you want them placed on. Remember, you can only place items on the road tiles. One Entity is placed, it will appear under &quot;Existing Entities&quot; tag. By clicking edit on them, you will be able to modify their properties, change their position or delete them altogether!&quot;" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="27.0" prefWidth="141.0" text="Placing Entities" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Generating Items">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="371.2" prefWidth="600.0" styleClass="BackgroundPane" stylesheets="@../assets/css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                       <image>
+                                          <Image url="@../assets/item_placeholder.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="476.0">
+                           <children>
+                              <BorderPane prefHeight="369.6" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <Label prefHeight="332.0" prefWidth="358.0" text="Under &quot;Item Pool&quot; submenu, you are capable of choosing what items you will be capable of bringing in battle for this level. To start, click &quot;Create New&quot; to open up a windon, on which you will be able to pick item type, amount of charges available and their refresh rate. Think wise! Items availability is integral to managing difficulty!  " textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="27.0" prefWidth="171.0" text="Generating Items" textAlignment="CENTER" textFill="WHITE" translateY="20.0" wrapText="true" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
       <Tab text="Bomb">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
